@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--web page for drawing page-->
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawing</title>
+    <link rel="stylesheet" href="myStyles.css">
+</head>
+
+<body>
+
+    <div id="home_page"><a href="index.html"><u>Back to Home Page</u></a></div>
+
+    <div>
+        <h1>Drawing</h1>
+
+        <img src="images/pencilSketch.jpg" alt="pencil skethcing" class="center">
+        <div style="padding-left: 650px;">
+            <!-- <form id="save-later-form"> -->
+            <button id="like-btn">Like</button>
+            <button id="save-for-later-btn">Save for later</button>
+            <!-- </form> -->
+        </div>
+        <p>It all started in my Childhood as soon as i picked up a pencil. It was my own little world. I mostly draw
+            pictures of people, animals and birds. I use crayons, pencils, colour pencils etc to draw pictures. During
+            birthdays of my parents and friends, i gift my best drawings to them. I got first prize in my school for the
+            drawing competition. I like to draw sunset the most. </p>
+    </div>
+
+    <script>
+        // JavaScript to add an item to the "Save for later" folder
+        document.getElementById("save-for-later-btn").addEventListener("click", function () {
+            // Add item to the "Save for later" folder
+            localStorage.setItem("itemName", "itemValue");
+            //console.log(this.files);
+            // Display an alert to show how many items are in the "Save for later" folder
+            alert("Item added to 'Save for later' folder. You have " + localStorage.length + " items in the folder.");
+        });
+
+        // JavaScript to handle "like" button click
+        document.getElementById("like-btn").addEventListener("click", function () {
+            let likes = parseInt(localStorage.getItem("likes"));
+            alert('The page owner is notified that you liked their page');
+        });
+    </script>
+
+</body>
+
+</html>

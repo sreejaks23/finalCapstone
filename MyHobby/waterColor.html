@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--web page for water color page-->
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Water Colour</title>
+  <link rel="stylesheet" href="myStyles.css">
+</head>
+
+<body>
+  <div id="home_page"><a href="index.html"><u>Back to Home Page</u></a></div>
+  <h1>Watercolor Painting</h1>
+
+  <div id="text">
+    <p>Watercolour paint consists of fine pigment particles suspended in a water-soluble binder (adhesive substance). It
+      is usually used on paper. As watercolour is semi-transparent, the white of the paper gives a natural luminosity to
+      the washes of colour. White areas of the image often are merely left unpainted to expose the paper. Watercolours
+      are sold as cakes of dry paint or as liquid in tubes, to which water is added. The paint can be applied in various
+      techniques such as wet-on-wet and wet-on-dry to obtain different effects.
+
+      The binder usually used for watercolour consists of gum, glucose, glycerine and wetting agents.</p>
+  </div>
+
+  <div id="water_color">
+
+    <img src="images/watercolor.jpg" alt="watercolor painting" class="center" style="padding-right: 1000px;width: 800px;">
+    <div style="padding-left: 300px;">
+      <button id="like-btn">Like</button>
+      <button id="save-for-later-btn">Save for later</button></div>
+  </div>
+
+
+  <div id="wc_Vid">
+    <h3 id="vidhead1" style="text-align: left;"><em>Water Color Painting for beginners</em></h3>
+    <iframe width="800" height="480" src="https://www.youtube.com/embed/VfVcG7FQWfI"></iframe>
+
+  </div>
+  <div style="padding-left: 300px;">
+    <!-- HTML for "like" button -->
+    <button id="like-btn">Like</button>
+    <button id="save-for-later-btn">Save for later</button>
+  </div>
+  <script>
+    // JavaScript to add an item to the "Save for later" folder
+    document.getElementById("save-for-later-btn").addEventListener("click", function () {
+      // Add item to the "Save for later" folder
+      localStorage.setItem("itemName", "itemValue");
+      // Display an alert to show how many items are in the "Save for later" folder
+      alert("Item added to 'Save for later' folder. You have " + localStorage.length + " items in the folder.");
+    });
+
+    // JavaScript to handle "like" button click
+    document.getElementById("like-btn").addEventListener("click", function () {
+      let likes = parseInt(localStorage.getItem("likes"));
+      alert('The page owner is notified that you liked their page');
+    });
+  </script>
+</body>
+
+</html>

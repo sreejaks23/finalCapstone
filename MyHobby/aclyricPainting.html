@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!--web page for aclyric painting-->
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aclyric Painting</title>
+  <link rel="stylesheet" href="myStyles.css">
+</head>
+
+<body>
+  <div id="home_page"><a href="index.html"><u>Back to Home Page</u></a></div>
+  <h1 style="padding-right: 77%;">Aclyric Painting</h1>
+  <div style="float: left;">
+
+    <img src="images/aclyricPaint.jpeg" alt="aclyric painting" style="width: 530px;">
+    <div style="padding-left: 100px;">
+      <button id="like-btn">Like</button>
+      <button id="save-for-later-btn">Save for later</button></div>
+  </div>
+
+  <div id="aclyric_video">
+    <h3 id="vidhead1"><em>Easy Aclyric Painting for beginners</em></h3>
+    <iframe width="800" height="480" src="https://www.youtube.com/embed/ppkv1bmGJUs"></iframe>
+    <div class="alert" style="padding-left: 300px;">
+    <button id="like-btn">Like</button>
+    <button id="save-for-later-btn">Save for later</button></div>
+  </div>
+
+  <div id="aclyric_technique">
+    <h2>9 Aclyric Painting Techniques</h2>
+    <p>The great thing about acrylic paint is that, unlike watercolour, it does not require a specialist canvas. Acrylic
+      paint can be used on most surfaces and is commonly used on paper and fabrics as well as canvas. Don’t be afraid to
+      experiment with different surfaces and acrylic techniques.</p>
+
+    <ol>
+      <li><a href="#dry_brush"></a>Dry Brush</li>
+      <li><a href="#washing"></a>Washing</li>
+      <li><a href="#stippling"></a>Stippling</li>
+      <li><a href="#pouring"></a>Pouring</li>
+      <li><a href="#splattering"></a>Splattering</li>
+      <li><a href="#dabbing"></a>Dabbing</li>
+      <li><a href="#palette_kniffe"></a>Palette Knife</li>
+      <li><a href="#detailing"></a>Detailing</li>
+      <li><a href="#under_painting"></a>Underpainting</li>
+    </ol>
+
+    <h3>1. Dry brush</h3>
+    <p>This is quite self-explanatory – simply apply paint onto your canvas with a dry brush. This technique is great if
+      you wanted a highly pigmented stroke of colour with rough, scratchy unrefined edges.</p>
+
+    <h3>2. Washing</h3>
+    <p>Washing makes your acrylic colours more translucent. This technique emulates watercolour, but it sets
+      permanently. Just add a little water to your acrylic paints and experiment with some effects.</p>
+
+    <h3>3. Stippling</h3>
+    <p>Stippling is based on a technique initially used for printing in the early 1500s by Gulio Campagnola. Apply the
+      head of your brush to your surface with a repetitive dabbing motion to create this effect. You can use stippling
+      to separate colour through individual strokes of pigment. Stippling is similar to pointillism, which tends to be
+      more precise.</p>
+
+    <h3>4. Pouring</h3>
+    <p>This fantastic technique is simple to execute and allows you to create some stunning works of abstract art.
+      Choose the colours you’d like to use and individually mix them with a pouring medium. After this step you have two
+      options:</p>
+    <ol>
+      <li>You can pour your colours individually onto the canvas</li>
+      <li>You can pour all the colours into a container, then put the canvas on top, right side facing down, flip it so
+        that the right side of the canvas is upwards and the container of paint is on top, facing down. Slowly release
+        the container and move the paint around the canvas.</li>
+    </ol>
+
+    <h3>5. Splattering</h3>
+    <p>This technique is about colour, expression and embracing the chaotic nature of life. The technique is achieved by
+      wetting your brush in water, before dipping it into an acrylic pigment of your choice before flicking/splatter
+      your soaked brush onto the canvas.</p>
+    <p>Jackson Pollock was a prominent figure in the abstract expressionist movement and he was known for using the
+      splatter technique to achieve bespoke pieces.</p>
+
+    <h3>6. Dabbing</h3>
+    <p>This can be achieved by using a stiff bristle brush or paper towel. Paint is applied with light and fast
+      pressure. Dabbing adds movement to your painting and is often used to illustrate bushes or greenery.</p>
+
+    <h3>7. Palette Knife</h3>
+    <p>This technique can be used in both acrylic and oil mediums. It is achieved by loading a palette knife with paint
+      and applying it on to the canvas with the palette knife. This will create great texture.</p>
+
+    <h3>8. Detailing</h3>
+    <p>Detailing is accomplished by using a fine brush, moderately wetting it so it maintains a pointy form. The brush
+      is then used in a similar way as a pen or pencil. You can use this technique to add intricate detail to your
+      paintings.</p>
+
+    <h3>9. Underpainting</h3>
+    <p>Underpainting – also referred to as “dead colouring” – is used to create a foundation for the artist to layer
+      colour on. It is highly useful for building contrast and tonal values. Underpainting can be utilised to create
+      tonal dominance within the painting through uniting.</p>
+
+  </div>
+
+  <script>
+    // JavaScript to add an item to the "Save for later" folder
+    document.getElementById("save-for-later-btn").addEventListener("click", function () {
+      // Add item to the "Save for later" folder
+      localStorage.setItem("itemName", "itemValue");
+      // Display an alert to show how many items are in the "Save for later" folder
+      alert("Item added to 'Save for later' folder. You have " + localStorage.length + " items in the folder.");
+    });
+
+     // JavaScript to handle "like" button click
+     document.getElementById("like-btn").addEventListener("click", function () {
+      let likes = parseInt(localStorage.getItem("likes"));
+      alert('The page owner is notified that you liked their page');
+    });
+  </script>
+
+</body>
+
+</html>

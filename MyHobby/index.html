@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!--webpage for index page. this page acts as a master page-->
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Index</title>
+  <link rel="stylesheet" href="myStyles.css">
+  <script type='text/javascript' src='myHobby.js'></script>
+
+</head>
+
+<body>
+  <!-- <h1>Welcome to my hobby page</h1>
+  <p>Take a look around and get to know me a little more</p>
+ <h2>My Passion for Drawing and Painting</h2> -->
+  <!--created list for linking other pages-->
+  <div class="container1">
+    <nav>
+      <ul>
+        <li><a href="drawing.html">Drawing</a></li>
+        <li><a href="waterColor.html">Water Colour</a></li>
+        <li><a href="aclyricPainting.html">Aclyric Painting</a></li>
+        <li><a href="diamondPainting.html">Diamond Painting</a></li>
+        <li><a href="save_for_later.html">Saved for later</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <h1>Welcome to my passion</h1>
+
+  <div class="container1">
+    <img src="images/art.jpg" alt="image for my passion" class="center">
+    <div style="padding-left: 650px;">
+      <!-- <form id="save-later-form"> -->
+        <button id="like-btn">Like</button>
+        <button id="save-for-later-btn">Save for later</button>
+      <!-- </form> -->
+    </div>
+
+    <p>Ever since I can remember I’ve always had a pencil in my hand drawing some kind of picture. As a child I remember
+      drawing a lot of houses, mainly pretty thatched cottages… know idea why, or where my love for drawing came from.
+      As I got older though, I began to draw a lot of portraits. It wasn’t just drawing though, I’ve enjoyed sewing,
+      making paper crafts, jewellery, candles, salt-dough, baking and clay are just a few I can think of that I have
+      explored over the years. I’ve experimented with many types of art mediums over the years, one of my favourites is
+      <b>acrylic paint</b>.
+    </p>
+  </div>
+
+  <!--Testimonials for passion page-->
+  <div class="container">
+    <img
+      src="https://static01.nyt.com/newsgraphics/2020/11/12/fake-people/4b806cf591a8a76adfc88d19e90c8c634345bf3d/fallbacks/mobile-06.jpg"
+      alt="Avatar" style="width:90px">
+    <p><span>Rexy</span> - Aclyric Artist</p>
+    <p>Sreeja have a great passion for art. Her work always brings a smile to my face</p>
+  </div>
+
+  <div class="container">
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeZwxbMPuCws_N_EFAtnfgv1aAVkX1YDCdAYNA2IMau794NCvAK9CojTJ_ADyuIjAe5XY&usqp=CAU"
+      alt="Avatar" style="width:90px">
+    <p><span>Rebecca</span> - CEO at Art & Co.</p>
+    <p>Her style evokes so many emotions</p>
+  </div>
+
+  <script>
+    // JavaScript to add an item to the "Save for later" folder
+    document.getElementById("save-for-later-btn").addEventListener("click", function () {
+      // Add item to the "Save for later" folder
+      localStorage.setItem("itemName", "itemValue");
+      //console.log(this.files);
+      // Display an alert to show how many items are in the "Save for later" folder
+      alert("Item added to 'Save for later' folder. You have " + localStorage.length + " items in the folder.");
+    });
+
+     // JavaScript to handle "like" button click
+     document.getElementById("like-btn").addEventListener("click", function () {
+      let likes = parseInt(localStorage.getItem("likes"));
+      alert('The page owner is notified that you liked their page');
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save for later</title>
+    <link rel="stylesheet" href="myStyles.css">
+
+</head>
+
+<body>
+    <div id="home_page"><a href="index.html"><u>Back to Home Page</u></a></div>
+    <!-- HTML for "Save for later" page -->
+    
+    <!-- HTML for comments form -->
+    <form id="comments-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <label for="comments">Comments:</label>
+        <textarea id="comments" name="comments"></textarea>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+    
+        // JavaScript to handle form submission and display comments
+        document.getElementById("comments-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+            var name = document.getElementById("name").value;
+            var comments = document.getElementById("comments").value;
+            document.getElementById("comments-list").innerHTML += "<div>" + name + ": " + comments + "</div>";
+        });
+    </script>
+</body>
+
+</html>
